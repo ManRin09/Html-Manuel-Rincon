@@ -1,0 +1,122 @@
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;              /* Flexbox principal: contenido + aside en columnas */
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.content {
+    flex: 3;                    /* El contenido ocupa 3/4 del espacio */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;                  /* Espacio uniforme entre secciones */
+}
+
+aside {
+    flex: 1;                    /* El aside ocupa 1/4 */
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+
+/* ====================== ESTILOS DE SECCIONES (mantengo los tuyos y agrego Flexbox) ====================== */
+section {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 0;           /* Ya no necesitamos margin porque .content usa gap */
+}
+
+section h2 {
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #3b82f6;
+    padding-bottom: 0.5rem;
+}
+
+section h3 {
+    color: #0f172a;
+    margin: 1rem 0;
+    font-size: 1.4rem;
+}
+
+article {
+    margin: 0;                  /* Reseteamos porque ahora usamos Flexbox */
+    padding: 1.5rem;
+    border-left: 4px solid #3b82f6;
+    background-color: #f8fafc;
+    border-radius: 5px;
+}
+
+/* ====================== FLEXBOX ESPECÍFICO POR SECCIÓN ====================== */
+
+/* Sección Proyectos (#inicio) - los 2 artículos en fila */
+#inicio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+#inicio h2 {
+    flex-basis: 100%;           /* El título ocupa toda la fila */
+}
+#inicio article {
+    flex: 1 1 400px;            /* Los proyectos crecen y se adaptan */
+}
+
+/* Sección Acerca de mí - logos uno al lado del otro */
+#acerca-de {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+}
+#acerca-de h2 {
+    flex-basis: 100%;
+}
+#acerca-de img {
+    flex: 1 1 280px;
+    max-width: 300px;
+    border-radius: 8px;
+}
+#acerca-de figcaption {
+    flex-basis: 100%;
+    text-align: center;
+    font-style: italic;
+    color: #64748b;
+    margin-top: 0.5rem;
+}
+
+/* Sección Habilidades - mantenemos stacked (más limpio) pero con mejor espaciado */
+#Mis-hablidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+#Mis-hablidades h2 {
+    flex-basis: 100%;
+}
+#Mis-hablidades ol {
+    flex: 1 1 45%;              /* Las listas se colocan una al lado de la otra en pantallas grandes */
+    padding-left: 1.5rem;
+}
+
+/* ====================== RESPONSIVE (Flexbox se adapta automáticamente) ====================== */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* En móviles todo queda en columna (más legible) */
+    }
+    .content {
+        gap: 1.5rem;
+    }
+    #inicio article,
+    #acerca-de img {
+        flex-basis: 100%;       /* Todo se apila en móviles */
+    }
+}

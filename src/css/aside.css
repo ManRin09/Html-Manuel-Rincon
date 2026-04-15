@@ -1,0 +1,47 @@
+aside {
+    background-color: #dbeafe;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+
+    /* --- AGREGADO FLEXBOX --- */
+    display: flex;
+    flex-direction: column; /* Apila el título y la lista verticalmente */
+    align-items: center;    /* Centra todo horizontalmente */
+    justify-content: center;
+    gap: 1rem;              /* Espacio uniforme entre elementos */
+}
+
+aside h3 {
+    margin: 0;
+}
+
+aside ul {
+    /* Quitamos estilos de lista y aplicamos flex para los enlaces */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+aside a {
+    color: #1e40af;
+    font-weight: bold;
+    text-decoration: none;
+    
+    /* Flexbox interno para alinear posibles iconos con el texto */
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+aside a:hover {
+    background-color: rgba(30, 64, 175, 0.1); /* Efecto sutil al pasar el mouse */
+    text-decoration: underline;
+}
