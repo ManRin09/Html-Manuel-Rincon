@@ -1,40 +1,232 @@
-El documento ha sido estructurado para resaltar tus capacidades técnicas y la organización del proyecto:
+De una bro 🔥📄
+Ahora sí vamos con la **documentación profesional** para que lo puedas entregar y también sustentar si te preguntan.
 
-Descripción del Proyecto: Explica que es un portafolio personal que muestra tu trayectoria en el SENA y Riwi.
+Te la voy a dejar **lista para copiar en Word o PDF**, con lenguaje formal pero humano.
 
-Tecnologías Utilizadas: Detalla el uso de HTML5, CSS3 (con énfasis en Flexbox y Grid) y las tecnologías de backend mencionadas en tus habilidades como Python y PHP.
+---
 
-Características Principales:
+# DOCUMENTACIÓN DEL PORTAFOLIO WEB
 
-Navegación Flexible: Uso de Flexbox para un menú adaptable.
+**Autor:** Manuel Rincón
+**Proyecto:** Portafolio personal + página de mascotas
+**Tecnologías:** HTML5 y CSS3 (Grid y Flexbox)
 
-Slider de Tecnologías: Una marquesina animada que muestra tu stack técnico.
+---
 
-Grilla de Proyectos: Organización de trabajos como "TraFree" y el "Creador de tareas" mediante CSS Grid.
+## 1. Introducción
 
-Galería Responsiva: Sección de mascotas optimizada para diferentes pantallas.
+El presente proyecto consiste en el desarrollo de un portafolio web personal, cuyo objetivo es presentar información académica, habilidades técnicas, proyectos realizados y una sección adicional dedicada a las mascotas del autor.
 
-Estructura de Archivos: Guía sobre dónde se encuentra el HTML, los estilos y las imágenes.
+Para el desarrollo de la interfaz se emplearon tecnologías web estándar como **HTML5** para la estructura del contenido y **CSS3** para el diseño visual y la maquetación.
+Dentro de CSS se implementaron herramientas modernas como **Grid Layout** y **Flexbox**, lo que permitió construir un diseño organizado, adaptable y responsive.
 
-Contacto: Incluye tus enlaces a LinkedIn y correo electrónico profesional.
+---
 
-Instrucciones de uso:
-Descarga el archivo generado.
+## 2. Objetivo general
 
-Colócalo en la carpeta raíz de tu proyecto de portafolio.
+Diseñar y desarrollar un portafolio web personal que permita mostrar la información profesional y académica del desarrollador, integrando una interfaz visual limpia, organizada y adaptable a diferentes dispositivos.
 
-Si subes tu código a GitHub, este archivo se mostrará automáticamente como la página de presentación de tu repositorio.
+---
 
-📝 Secciones Destacadas
-Inicio: Breve introducción y presentación personal.
+## 3. Objetivos específicos
 
-Proyectos: Detalles sobre el desarrollo de TraFree (App de taxis) y el Creador de Tareas en Python.
+* Estructurar la página usando etiquetas semánticas de HTML5.
+* Aplicar estilos modernos con CSS3.
+* Implementar **CSS Grid** para la distribución estructural.
+* Implementar **Flexbox** para la alineación interna de elementos.
+* Diseñar una interfaz adaptable a dispositivos móviles.
+* Organizar una galería visual para la sección de mascotas.
 
-Acerca de mí: Información sobre mi formación en el SENA (Análisis y Desarrollo de Software) y Riwi.
+---
 
-Habilidades: Desglose de competencias técnicas y habilidades socioemocionales (Liderazgo, Trabajo en equipo).
+## 4. Estructura del proyecto
 
-Contacto: Enlaces directos a LinkedIn y canales de comunicación.
+```text
+Html-Manuel-Rincon/
+│
+├── index.html
+├── mascotas.html
+│
+├── public/
+│   └── img/
+│
+├── src/
+│   └── css/
+│       ├── general.css
+│       ├── header.css
+│       ├── main.css
+│       ├── aside.css
+│       ├── habilidades.css
+│       ├── fooder.css
+│       └── mascotas.css
+```
+
+---
+
+## 5. Descripción técnica del HTML
+
+### Header
+
+La etiqueta `<header>` se utiliza para mostrar la parte superior de la página.
+
+Incluye:
+
+* barra de navegación
+* saludo principal
+* nombre del desarrollador
+
+Ejemplo:
+
+```html
+<header>
+    <nav>
+        ...
+    </nav>
+    <p>Hola, soy</p>
+    <h1>Manuel Rincon</h1>
+</header>
+```
+
+---
+
+### Main
+
+La etiqueta `<main>` contiene la estructura principal del portafolio.
+
+Se divide en:
+
+* contenido principal
+* barra lateral (`aside`)
+
+```html
+<main>
+    <div class="content">
+        ...
+    </div>
+    <aside>
+        ...
+    </aside>
+</main>
+```
+
+---
+
+### Sections
+
+Las secciones permiten dividir el contenido por categorías.
+
+Ejemplo:
+
+```html
+<section id="inicio">
+```
+
+Se usaron para:
+
+* proyectos
+* acerca de mí
+* habilidades
+
+---
+
+### Footer
+
+Se empleó `<footer>` para la información de contacto.
+
+```html
+<footer id="contacto">
+```
+
+---
+
+## 6. Implementación de CSS Grid
+
+CSS Grid fue utilizado para la **estructura principal del diseño**.
+
+Ejemplo:
+
+```css
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+```
+
+Esto divide la pantalla en:
+
+```text
+contenido principal | aside
+```
+
+También se usó en la galería de mascotas:
+
+```css
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+```
+
+Esto permite que las tarjetas se acomoden automáticamente.
+
+---
+
+## 7. Implementación de Flexbox
+
+Flexbox fue usado para organizar elementos internos.
+
+Ejemplo:
+
+```css
+article {
+    display: flex;
+    flex-direction: column;
+}
+```
+
+Esto ordena:
+
+* título
+* descripción
+* imagen
+* texto
+
+También se implementó en:
+
+* header
+* navegación
+* tarjetas
+* footer
+
+---
+
+## 8. Responsive Design
+
+Se implementó diseño responsive usando `@media`.
+
+```css
+@media (max-width: 768px)
+```
+
+Esto permite que el sitio se adapte correctamente en:
+
+* celulares
+* tablets
+* portátiles
+
+---
+
+## 9. Conclusión
+
+El proyecto permitió aplicar conocimientos en desarrollo web front-end, especialmente en la estructuración semántica con HTML5 y la maquetación moderna con CSS3.
+
+La implementación de **Grid y Flexbox** mejoró considerablemente la organización visual y la adaptabilidad del sitio.
+
+---
+
+Bro, esto ya está **nivel entrega seria para SENA / Riwi** 🔥
+Si quieres, el siguiente paso te ayudo a hacer la **documentación comentada dentro del código** línea por línea.
+
 
 👤 Autor
 Manuel Rincón
