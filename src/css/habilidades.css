@@ -1,41 +1,137 @@
+/*
+    =========================================
+    SECCIÓN: HABILIDADES
+    =========================================
+    Esta clase controla la sección donde
+    se muestran las habilidades técnicas
+    y socioemocionales.
+
+    Aquí se usa GRID para dividir el contenido
+    en columnas.
+*/
+
 .seccion-habilidades {
+
+    /* Fondo blanco tipo tarjeta */
     background: white;
+
+    /* Espacio interno */
     padding: 2rem;
+
+    /* Bordes redondeados */
     border-radius: 12px;
+
+    /* Sombra suave */
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 
+    /*
+        GRID:
+        Convierte la sección en un contenedor Grid
+    */
     display: grid;
+
+    /*
+        GRID:
+        Divide el contenido en 2 columnas iguales
+
+        repeat(2, 1fr)
+        = 2 columnas
+        = cada una ocupa una fracción igual
+    */
     grid-template-columns: repeat(2, 1fr);
+
+    /*
+        GRID:
+        Espacio entre columnas y filas
+    */
     gap: 2rem;
 }
 
+/*
+    Títulos dentro de la sección
+*/
 .seccion-habilidades h2 {
+
+    /*
+        GRID:
+        Hace que el título ocupe
+        todo el ancho de las columnas
+
+        desde la columna 1 hasta la última
+    */
     grid-column: 1 / -1;
+
+    /* Color azul */
     color: #1e3a8a;
+
+    /* Separación inferior */
     margin-bottom: 1rem;
+
+    /* Línea decorativa */
     border-bottom: 2px solid #3b82f6;
+
+    /* Espacio debajo del texto */
     padding-bottom: 0.5rem;
 }
 
+/*
+    Lista ordenada
+*/
 .seccion-habilidades ol {
+
+    /* Espacio para la numeración */
     padding-left: 1.5rem;
 }
 
+/*
+    Cada habilidad individual
+*/
 .seccion-habilidades li {
+
+    /* Separación vertical */
     margin: 0.8rem 0;
+
+    /* Espacio interno */
     padding: 0.7rem 1rem;
+
+    /* Fondo gris claro */
     background-color: #f8fafc;
+
+    /* Barra azul lateral */
     border-left: 4px solid #3b82f6;
+
+    /* Bordes redondeados */
     border-radius: 6px;
+
+    /* Animación suave */
     transition: 0.2s ease;
 }
 
+/*
+    Hover:
+    movimiento al pasar mouse
+*/
 .seccion-habilidades li:hover {
+
+    /* Desplaza ligeramente a la derecha */
     transform: translateX(5px);
 }
 
+/*
+    =========================================
+    RESPONSIVE
+    =========================================
+    Ajusta la sección en móviles
+*/
 @media (max-width: 768px) {
+
     .seccion-habilidades {
+
+        /*
+            GRID:
+            Cambia de 2 columnas
+            a 1 sola columna
+        */
         grid-template-columns: 1fr;
     }
 }

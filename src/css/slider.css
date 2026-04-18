@@ -1,35 +1,129 @@
+/*
+    =========================================
+    SECCIÓN: TECH SLIDER
+    =========================================
+    Esta sección controla la cinta deslizante
+    de logos de tecnologías.
+
+    Aquí aparecen los logos de:
+    Python, PHP, SQL, HTML, CSS, JS, etc.
+
+    Se usa FLEXBOX para alineación
+    y animación con keyframes para movimiento.
+*/
+
 .tech-slider {
+
+    /* Fondo claro */
     background: #f8fafc;
+
+    /* Espacio interno arriba y abajo */
     padding: 1.5rem 0;
+
+    /*
+        Oculta lo que se salga del contenedor
+        para que la animación no desborde
+    */
     overflow: hidden;
+
+    /* Línea inferior decorativa */
     border-bottom: 1px solid #e2e8f0;
 
+    /*
+        FLEXBOX:
+        centra horizontalmente el track
+    */
     display: flex;
+
+    /*
+        FLEXBOX:
+        centra el contenido
+    */
     justify-content: center;
 }
 
+/*
+    Contenedor que se mueve
+*/
 .slider-track {
+
+    /*
+        FLEXBOX:
+        organiza los logos horizontalmente
+    */
     display: flex;
+
+    /*
+        FLEXBOX:
+        alinea verticalmente al centro
+    */
     align-items: center;
+
+    /*
+        FLEXBOX:
+        separación entre logos
+    */
     gap: 2rem;
+
+    /*
+        Ajusta el ancho al contenido real
+    */
     width: fit-content;
+
+    /*
+        Aplica la animación infinita
+        llamada scroll
+    */
     animation: scroll 20s linear infinite;
 }
 
+/*
+    Estilo de cada logo
+*/
 .slider-track img {
+
+    /* Altura fija */
     height: 50px;
+
+    /* Mantiene proporción */
     width: auto;
+
+    /* Animación suave al hover */
     transition: transform 0.3s ease;
 }
 
+/*
+    Hover sobre logos
+*/
 .slider-track img:hover {
+
+    /*
+        Aumenta ligeramente tamaño
+    */
     transform: scale(1.1);
 }
 
+/*
+    =========================================
+    ANIMACIÓN
+    =========================================
+    Controla el movimiento automático
+    del slider
+*/
 @keyframes scroll {
+
+    /*
+        Inicio:
+        posición original
+    */
     0% {
         transform: translateX(0);
     }
+
+    /*
+        Final:
+        se mueve a la izquierda
+    */
     100% {
         transform: translateX(-50%);
     }

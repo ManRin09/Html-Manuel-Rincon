@@ -1,110 +1,277 @@
+/*
+    =========================================
+    ARCHIVO: mascotas.css
+    =========================================
+    Este archivo controla todos los estilos
+    de la página de mascotas.
+
+    Aquí se define:
+    - reset general
+    - encabezado
+    - galería de tarjetas
+    - información de mascotas
+    - footer
+    - responsive
+*/
+
 /* RESET */
 * {
+
+    /* Elimina márgenes por defecto */
     margin: 0;
+
+    /* Elimina padding por defecto */
     padding: 0;
+
+    /*
+        Incluye padding y border dentro
+        del tamaño total del elemento
+    */
     box-sizing: border-box;
 }
 
 body {
+
+    /* Fondo general */
     background-color: #f0f2f5;
+
+    /* Color base del texto */
     color: #333;
+
+    /* Fuente global */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* HEADER */
 header {
+
+    /* Fondo degradado azul */
     background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+
+    /* Texto blanco */
     color: white;
+
+    /* Centrado del texto */
     text-align: center;
+
+    /* Espaciado interno */
     padding: 4rem 1rem;
 
+    /*
+        FLEXBOX:
+        organiza título y subtítulo
+        verticalmente
+    */
     display: flex;
+
+    /*
+        FLEXBOX:
+        dirección vertical
+    */
     flex-direction: column;
+
+    /*
+        FLEXBOX:
+        espacio entre elementos
+    */
     gap: 1rem;
 }
 
 /* GRID GALLERY */
 .gallery {
+
+    /* ancho máximo */
     max-width: 1100px;
+
+    /* margen superior/inferior + centrado */
     margin: 3rem auto;
+
+    /* padding lateral */
     padding: 0 20px;
 
+    /*
+        GRID:
+        convierte la galería en contenedor Grid
+    */
     display: grid;
+
+    /*
+        GRID:
+        crea columnas automáticas adaptables
+
+        mínimo 300px por tarjeta
+        máximo 1 fracción disponible
+    */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    /*
+        GRID:
+        separación entre tarjetas
+    */
     gap: 25px;
 }
 
 /* TARJETAS */
 .pet-card {
+
+    /* fondo blanco */
     background: white;
+
+    /* esquinas redondeadas */
     border-radius: 15px;
+
+    /* oculta exceso */
     overflow: hidden;
+
+    /* sombra */
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 
+    /*
+        FLEXBOX:
+        organiza imagen + info verticalmente
+    */
     display: flex;
+
+    /*
+        FLEXBOX:
+        dirección vertical
+    */
     flex-direction: column;
 
+    /* animación suave */
     transition: transform 0.3s ease;
 }
 
+/* Hover tarjeta */
 .pet-card:hover {
+
+    /* eleva la tarjeta */
     transform: translateY(-10px);
 }
 
+/* Imagen mascota */
 .pet-card img {
+
+    /* ancho completo */
     width: 100%;
+
+    /* altura fija */
     height: 300px;
+
+    /*
+        ajusta imagen sin deformarla
+    */
     object-fit: cover;
 }
 
 /* INFORMACIÓN */
 .info {
+
+    /* espacio interno */
     padding: 1.5rem;
 
+    /*
+        FLEXBOX:
+        organiza nombre + texto
+    */
     display: flex;
+
+    /*
+        FLEXBOX:
+        vertical
+    */
     flex-direction: column;
+
+    /*
+        FLEXBOX:
+        separación interna
+    */
     gap: 1rem;
 }
 
+/* Nombre mascota */
 .info h3 {
+
+    /* azul */
     color: #1e3a8a;
+
+    /* tamaño */
     font-size: 1.5rem;
+
+    /* línea inferior */
     border-bottom: 2px solid #dbeafe;
+
+    /* separación interna */
     padding-bottom: 0.5rem;
 }
 
+/* Descripción */
 .info p {
+
+    /* altura entre líneas */
     line-height: 1.6;
+
+    /* gris */
     color: #4b5563;
 }
 
 /* FOOTER */
 footer {
+
+    /* margen vertical */
     margin: 4rem 0;
+
+    /* texto centrado */
     text-align: center;
 
+    /*
+        FLEXBOX:
+        centra horizontalmente el botón
+    */
     display: flex;
+
+    /*
+        FLEXBOX:
+        centrado horizontal
+    */
     justify-content: center;
 }
 
+/* Botón enlace */
 footer a {
+
     color: #1e3a8a;
+
     text-decoration: none;
+
     font-weight: bold;
+
     border: 2px solid #1e3a8a;
+
     padding: 10px 20px;
+
     border-radius: 25px;
+
     transition: 0.3s;
 }
 
+/* Hover botón */
 footer a:hover {
+
     background: #1e3a8a;
+
     color: white;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+
     .gallery {
+
+        /*
+            GRID:
+            cambia a una sola columna
+        */
         grid-template-columns: 1fr;
     }
 }

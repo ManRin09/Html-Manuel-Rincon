@@ -1,50 +1,159 @@
+/*
+    =========================================
+    SECCIÓN: ESTILOS GENERALES
+    =========================================
+    Este bloque define configuraciones globales
+    que afectan todos los elementos de la página.
+*/
+
 * {
+
+    /* Elimina márgenes por defecto del navegador */
     margin: 0;
+
+    /* Elimina espacios internos por defecto */
     padding: 0;
+
+    /*
+        Hace que el padding y border se incluyan
+        dentro del ancho total del elemento
+    */
     box-sizing: border-box;
+
+    /* Define la fuente general del sitio */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/*
+    =========================================
+    BODY
+    =========================================
+    Controla toda la estructura principal
+    de la página.
+*/
 body {
+
+    /* Color de fondo general */
     background-color: #f0f2f5;
+
+    /* Color del texto */
     color: #333;
+
+    /* Espaciado vertical entre líneas */
     line-height: 1.6;
-    
-    /* FLEXBOX: Estructura vertical de toda la página */
+
+    /*
+        FLEXBOX:
+        Convierte todo el body en un contenedor flexible
+    */
     display: flex;
+
+    /*
+        FLEXBOX:
+        Organiza los elementos verticalmente
+        de arriba hacia abajo
+    */
     flex-direction: column;
-    min-height: 100vh; /* Obliga al body a medir al menos el alto de la pantalla */
+
+    /*
+        Hace que el body mida mínimo
+        el alto completo de la pantalla
+    */
+    min-height: 100vh;
 }
 
-/* FLEXBOX: El main crecerá para empujar al footer al final */
+/*
+    =========================================
+    MAIN
+    =========================================
+    Contenido principal de la página
+*/
 main {
-    flex: 1; 
+
+    /*
+        FLEXBOX:
+        Hace que main crezca automáticamente
+        ocupando el espacio disponible
+
+        Esto empuja el footer al final
+        de la pantalla.
+    */
+    flex: 1;
+
+    /* Espacio interno */
     padding: 2rem;
 }
 
+/*
+    =========================================
+    IMÁGENES
+    =========================================
+    Estilo general para todas las imágenes
+*/
 img {
+
+    /* Evita que se salgan del contenedor */
     max-width: 100%;
+
+    /* Mantiene la proporción */
     height: auto;
+
+    /*
+        Hace que la imagen se comporte
+        como bloque
+    */
     display: block;
+
+    /* Centrado automático */
     margin: 1rem auto;
+
+    /* Bordes redondeados */
     border-radius: 8px;
+
+    /* Sombra suave */
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+/*
+    Pie de imagen
+*/
 figcaption {
+
+    /* Centra el texto */
     text-align: center;
+
+    /* Estilo cursiva */
     font-style: italic;
+
+    /* Color gris azulado */
     color: #64748b;
+
+    /* Separación superior */
     margin-top: 0.5rem;
 }
 
-/* FLEXBOX: En las listas para controlar el alineamiento del número/texto */
+/*
+    =========================================
+    LISTAS ORDENADAS
+    =========================================
+*/
 ol {
+
+    /* Espacio a la izquierda para los números */
     padding-left: 1.5rem;
+
+    /* Margen superior e inferior */
     margin: 1rem 0;
 }
 
+/*
+    Elementos individuales de lista
+*/
 li {
+
+    /* Separación vertical */
     margin: 0.5rem 0;
+
+    /* Tamaño de fuente */
     font-size: 1.05rem;
 }

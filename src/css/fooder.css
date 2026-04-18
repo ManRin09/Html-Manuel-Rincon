@@ -1,33 +1,117 @@
+/*
+    =========================================
+    SECCIÓN: FOOTER
+    =========================================
+    Esta sección controla el pie de página
+    del portafolio.
+
+    Aquí se muestra la información de contacto
+    y se centra visualmente el contenido.
+*/
+
 footer {
+
+    /* Fondo oscuro del pie de página */
     background-color: #0f172a;
+
+    /* Color blanco para el texto */
     color: white;
+
+    /* Espaciado interno arriba/abajo y lados */
     padding: 4rem 1.5rem;
 
+    /*
+        FLEXBOX:
+        Convierte el footer en contenedor flexible
+    */
     display: flex;
+
+    /*
+        FLEXBOX:
+        Centra horizontalmente el contenido
+    */
     justify-content: center;
+
+    /*
+        FLEXBOX:
+        Centra verticalmente el contenido
+    */
     align-items: center;
 
+    /* Centra el texto */
     text-align: center;
 }
 
+/*
+    Contenedor interno del footer
+*/
 .footer-container {
+
+    /* Limita el ancho máximo */
     max-width: 800px;
+
+    /* Ocupa el ancho disponible */
     width: 100%;
 
+    /*
+        GRID:
+        Organiza los elementos internos
+        en filas automáticas
+    */
     display: grid;
+
+    /*
+        GRID:
+        Espacio entre cada elemento hijo
+    */
     gap: 1rem;
 }
 
+/*
+    Contenedor de datos de contacto
+*/
 .datos-contacto {
+
+    /*
+        FLEXBOX:
+        Organiza correo y teléfono
+    */
     display: flex;
+
+    /*
+        FLEXBOX:
+        Centra horizontalmente
+    */
     justify-content: center;
+
+    /*
+        FLEXBOX:
+        Espacio entre los elementos
+    */
     gap: 1rem;
+
+    /*
+        FLEXBOX:
+        Permite que los elementos bajen
+        a otra línea en pantallas pequeñas
+    */
     flex-wrap: wrap;
+
+    /* Margen superior */
     margin-top: 1rem;
 }
 
+/*
+    Estilo de cada dato de contacto
+*/
 .datos-contacto p {
+
+    /* Fondo más claro para destacar */
     background-color: #1e293b;
+
+    /* Espaciado interno */
     padding: 0.8rem 1rem;
+
+    /* Bordes redondeados */
     border-radius: 8px;
 }

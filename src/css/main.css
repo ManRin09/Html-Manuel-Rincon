@@ -1,72 +1,262 @@
+/*
+    =========================================
+    SECCIÓN: MAIN
+    =========================================
+    Este archivo controla la estructura principal
+    del contenido del portafolio.
+
+    Aquí se define:
+    - layout general
+    - secciones
+    - proyectos
+    - acerca de mí
+    - responsive
+*/
+
 main {
+
+    /* Ancho máximo del contenido */
     max-width: 1200px;
+
+    /*
+        Centra horizontalmente el main
+        y agrega margen superior/inferior
+    */
     margin: 2rem auto;
+
+    /* Espacio interno lateral */
     padding: 0 1.5rem;
 
+    /*
+        GRID:
+        Convierte el main en contenedor Grid
+    */
     display: grid;
+
+    /*
+        GRID:
+        Divide el main en 2 columnas
+
+        3fr = contenido principal grande
+        1fr = aside más pequeño
+    */
     grid-template-columns: 3fr 1fr;
+
+    /*
+        GRID:
+        Espacio entre columnas
+    */
     gap: 2rem;
 }
 
+/*
+    Contenedor interno del contenido principal
+*/
 .content {
+
+    /*
+        GRID:
+        Organiza las secciones
+        una debajo de otra
+    */
     display: grid;
+
+    /*
+        GRID:
+        Espacio entre secciones
+    */
     gap: 2rem;
 }
 
+/*
+    Estilo general para todas las secciones
+*/
 section {
+
+    /* Fondo blanco */
     background: white;
+
+    /* Espacio interno */
     padding: 2rem;
+
+    /* Bordes redondeados */
     border-radius: 12px;
+
+    /* Sombra suave */
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 
+/*
+    =========================================
+    SECCIÓN INICIO
+    =========================================
+    Proyectos principales
+*/
 #inicio {
+
+    /*
+        GRID:
+        Divide la sección en 2 columnas
+    */
     display: grid;
+
+    /*
+        GRID:
+        2 columnas iguales
+    */
     grid-template-columns: repeat(2, 1fr);
+
+    /*
+        GRID:
+        Espacio entre elementos
+    */
     gap: 2rem;
 }
 
+/*
+    Hace que título y párrafo
+    ocupen ambas columnas
+*/
 #inicio h2,
 #inicio > p {
+
+    /*
+        GRID:
+        ocupa desde columna 1 hasta la última
+    */
     grid-column: 1 / -1;
 }
 
+/*
+    Tarjetas de proyecto
+*/
 article {
+
+    /*
+        FLEXBOX:
+        Organiza el contenido verticalmente
+    */
     display: flex;
+
+    /*
+        FLEXBOX:
+        Orden vertical
+    */
     flex-direction: column;
+
+    /*
+        FLEXBOX:
+        Espacio entre elementos internos
+    */
     gap: 1rem;
 
+    /* Fondo gris claro */
     background-color: #f8fafc;
+
+    /* Espaciado interno */
     padding: 1.5rem;
+
+    /* Barra lateral azul */
     border-left: 4px solid #3b82f6;
+
+    /* Bordes redondeados */
     border-radius: 8px;
 }
 
+/*
+    =========================================
+    SECCIÓN ACERCA DE
+    =========================================
+*/
 #acerca-de {
+
+    /*
+        GRID:
+        Contenedor Grid
+    */
     display: grid;
+
+    /*
+        GRID:
+        2 columnas
+    */
     grid-template-columns: repeat(2, 1fr);
+
+    /*
+        GRID:
+        espacio interno
+    */
     gap: 2rem;
+
+    /* Centra el texto */
     text-align: center;
 }
 
+/*
+    Título ocupa ambas columnas
+*/
 #acerca-de h2 {
+
+    /*
+        GRID:
+        título ancho completo
+    */
     grid-column: 1 / -1;
 }
 
+/*
+    Figuras con imagen y texto
+*/
 figure {
+
+    /*
+        FLEXBOX:
+        organiza imagen + texto verticalmente
+    */
     display: flex;
+
+    /*
+        FLEXBOX:
+        dirección vertical
+    */
     flex-direction: column;
+
+    /*
+        FLEXBOX:
+        centra horizontalmente
+    */
     align-items: center;
+
+    /*
+        FLEXBOX:
+        espacio entre imagen y texto
+    */
     gap: 0.5rem;
 }
 
+/*
+    =========================================
+    RESPONSIVE
+    =========================================
+*/
 @media (max-width: 768px) {
+
     main {
+
+        /*
+            GRID:
+            cambia a una sola columna
+        */
         grid-template-columns: 1fr;
     }
 
     #inicio,
     #acerca-de {
+
+        /*
+            GRID:
+            una sola columna en móviles
+        */
         grid-template-columns: 1fr;
     }
 }

@@ -1,10 +1,50 @@
 <!DOCTYPE html>
+
+<!--
+    =========================================
+    ARCHIVO: index.html
+    =========================================
+    FUNCIÓN DEL ARCHIVO:
+    Este es el archivo principal del portafolio web.
+
+    Su función es estructurar toda la página principal
+    usando HTML semántico.
+
+    Aquí se organiza:
+    - Encabezado principal
+    - Menú de navegación
+    - Presentación profesional
+    - Proyectos destacados
+    - Información académica
+    - Habilidades técnicas y blandas
+    - Barra lateral con enlaces
+    - Información de contacto
+
+    Este archivo trabaja junto con varios archivos CSS
+    para darle diseño, distribución y responsive.
+-->
+
 <html lang="es">
 <head>
+    <!--
+        HEAD:
+        Contiene la configuración general del documento.
+
+        Aquí se define:
+        - codificación UTF-8
+        - adaptación a móviles
+        - título de la pestaña
+        - enlaces a hojas de estilo CSS
+    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi portafolio - Manuel Rincon</title>
 
+    <!--
+        ENLACES CSS:
+        Cada archivo CSS tiene una función específica
+        para mantener el código organizado.
+    -->
     <link rel="stylesheet" href="src/css/general.css">
     <link rel="stylesheet" href="src/css/header.css">
     <link rel="stylesheet" href="src/css/slider.css">
@@ -15,7 +55,27 @@
 </head>
 
 <body>
+
+    <!--
+        =========================================
+        HEADER
+        =========================================
+        Esta sección representa la parte superior
+        del portafolio.
+
+        Su objetivo es presentar al usuario
+        y ofrecer navegación rápida entre secciones.
+    -->
     <header>
+
+        <!--
+            NAV:
+            Menú de navegación interna.
+
+            Cada enlace utiliza anclas (#)
+            para moverse a una sección específica
+            dentro de la misma página.
+        -->
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
@@ -25,10 +85,23 @@
             </ul>
         </nav>
 
+        <!--
+            Presentación principal del desarrollador
+        -->
         <p>Hola, soy</p>
         <h1>Manuel Rincon</h1>
     </header>
 
+    <!--
+        =========================================
+        SLIDER DE TECNOLOGÍAS
+        =========================================
+        Esta sección muestra visualmente
+        las tecnologías y lenguajes que manejas.
+
+        Funciona como una vitrina visual
+        de tus habilidades técnicas.
+    -->
     <div class="tech-slider">
         <div class="slider-track">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
@@ -51,13 +124,30 @@
         </div>
     </div>
 
+    <!--
+        =========================================
+        MAIN
+        =========================================
+        Contenedor principal de la página.
+
+        Aquí se organiza el contenido principal
+        y la barra lateral.
+    -->
     <main>
         <div class="content">
 
+            <!--
+                SECCIÓN INICIO:
+                Presentación profesional y proyectos.
+            -->
             <section id="inicio">
                 <h2>Desarrollador Backend & Fullstack en formación</h2>
                 <p>Construyo soluciones web con orden, lógica y visión de futuro</p>
 
+                <!--
+                    ARTICLE:
+                    Tarjeta individual de proyecto.
+                -->
                 <article>
                     <h3>Proyecto: TraFree</h3>
                     <p>
@@ -74,6 +164,9 @@
                     </figure>
                 </article>
 
+                <!--
+                    Segundo proyecto destacado
+                -->
                 <article>
                     <h3>Creador de tareas con Python</h3>
                     <p>Proyecto desarrollado durante una prueba técnica en Riwi.</p>
@@ -87,6 +180,10 @@
                 </article>
             </section>
 
+            <!--
+                SECCIÓN ACERCA DE MÍ:
+                Formación académica e instituciones.
+            -->
             <section id="acerca-de">
                 <h2>Acerca de mí</h2>
 
@@ -105,6 +202,11 @@
                 </figure>
             </section>
 
+            <!--
+                SECCIÓN HABILIDADES:
+                Lista de habilidades técnicas
+                y socioemocionales.
+            -->
             <section id="mis-habilidades" class="seccion-habilidades">
                 <h2>Habilidades Técnicas</h2>
                 <ol>
@@ -122,6 +224,10 @@
             </section>
         </div>
 
+        <!--
+            ASIDE:
+            Barra lateral con enlaces complementarios.
+        -->
         <aside>
             <h3>Enlaces Relacionados</h3>
             <ul>
@@ -139,6 +245,10 @@
         </aside>
     </main>
 
+    <!--
+        FOOTER:
+        Información de contacto final.
+    -->
     <footer id="contacto">
         <div class="footer-container">
             <h2>Contacto</h2>

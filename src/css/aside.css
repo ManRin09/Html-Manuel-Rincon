@@ -1,39 +1,132 @@
+/*
+    =========================================
+    ARCHIVO / SECCIÓN: ASIDE
+    =========================================
+    Esta sección controla la barra lateral
+    del portafolio.
+
+    Aquí se muestran enlaces complementarios
+    como LinkedIn y correo.
+*/
+
 aside {
+
+    /* Define el color de fondo blanco del aside */
     background-color: white;
+
+    /* Espacio interno entre el borde y el contenido */
     padding: 1.5rem;
+
+    /* Redondea las esquinas del contenedor */
     border-radius: 10px;
 
+    /*
+        GRID:
+        Convierte el aside en un contenedor Grid.
+
+        Esto permite organizar los elementos internos
+        en filas automáticas.
+    */
     display: grid;
+
+    /*
+        GRID:
+        Crea separación automática entre
+        los elementos hijos del aside.
+    */
     gap: 1rem;
 
+    /*
+        Ajusta la altura automáticamente
+        al tamaño del contenido.
+    */
     height: fit-content;
+
+    /*
+        Agrega sombra para dar efecto
+        de tarjeta elevada.
+    */
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 
+/*
+    Estilo del título dentro del aside
+*/
 aside h3 {
+
+    /* Elimina márgenes por defecto */
     margin: 0;
+
+    /* Color azul oscuro para el título */
     color: #1e3a8a;
 }
 
+/*
+    Lista que contiene los enlaces
+*/
 aside ul {
+
+    /* Quita los puntos de la lista */
     list-style: none;
+
+    /* Elimina espacio interno */
     padding: 0;
+
+    /* Elimina margen externo */
     margin: 0;
 
+    /*
+        FLEXBOX:
+        Convierte la lista en un contenedor flexible.
+    */
     display: flex;
+
+    /*
+        FLEXBOX:
+        Organiza los elementos verticalmente
+        uno debajo del otro.
+    */
     flex-direction: column;
+
+    /*
+        FLEXBOX:
+        Espacio entre cada enlace.
+    */
     gap: 1rem;
 }
 
+/*
+    Estilo de cada enlace
+*/
 aside a {
+
+    /* Color azul del texto */
     color: #1e40af;
+
+    /* Texto en negrita */
     font-weight: bold;
+
+    /* Elimina subrayado */
     text-decoration: none;
+
+    /* Espacio interno del enlace */
     padding: 0.7rem 1rem;
+
+    /* Bordes redondeados */
     border-radius: 6px;
+
+    /*
+        Transición suave al hacer hover
+    */
     transition: 0.3s ease;
 }
 
+/*
+    Hover:
+    efecto cuando pasas el mouse encima
+*/
 aside a:hover {
+
+    /* Fondo azul transparente */
     background-color: rgba(30, 64, 175, 0.1);
 }

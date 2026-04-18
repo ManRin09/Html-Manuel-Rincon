@@ -1,56 +1,192 @@
+/*
+    =========================================
+    SECCIÓN: HEADER
+    =========================================
+    Esta sección controla la parte superior
+    del portafolio.
+
+    Aquí se organiza:
+    - menú de navegación
+    - saludo
+    - nombre principal
+*/
+
 header {
+
+    /* Fondo oscuro */
     background-color: #0f172a;
+
+    /* Texto blanco */
     color: white;
+
+    /* Espacio inferior grande */
     padding: 0 0 4rem 0;
 
+    /*
+        GRID:
+        Convierte el header en contenedor Grid
+    */
     display: grid;
+
+    /*
+        GRID:
+        Crea 3 filas automáticas
+
+        fila 1 = nav
+        fila 2 = saludo
+        fila 3 = nombre
+    */
     grid-template-rows: auto auto auto;
+
+    /*
+        GRID:
+        Centra horizontalmente los elementos
+        dentro de cada celda
+    */
     justify-items: center;
+
+    /*
+        GRID:
+        Espacio entre filas
+    */
     gap: 1rem;
+
+    /* Centra el texto */
     text-align: center;
 }
 
+/*
+    =========================================
+    NAV
+    =========================================
+    Barra de navegación superior
+*/
 nav {
+
+    /* Ocupa todo el ancho */
     width: 100%;
+
+    /* Fondo oscuro semitransparente */
     background-color: rgba(15, 23, 42, 0.95);
+
+    /* Espacio interno */
     padding: 1rem 0;
+
+    /*
+        Mantiene el menú fijo al hacer scroll
+    */
     position: sticky;
+
+    /* Se pega arriba */
     top: 0;
+
+    /*
+        Controla la profundidad visual
+        para que quede encima de otros elementos
+    */
     z-index: 1000;
 }
 
+/*
+    Lista del menú
+*/
 nav ul {
+
+    /* Elimina viñetas */
     list-style: none;
 
+    /*
+        FLEXBOX:
+        Convierte la lista en contenedor flexible
+    */
     display: flex;
+
+    /*
+        FLEXBOX:
+        Centra horizontalmente
+    */
     justify-content: center;
+
+    /*
+        FLEXBOX:
+        Espacio entre enlaces
+    */
     gap: 2rem;
+
+    /*
+        FLEXBOX:
+        Permite que bajen de línea
+        en pantallas pequeñas
+    */
     flex-wrap: wrap;
 
+    /* Elimina márgenes */
     margin: 0;
+
+    /* Elimina padding */
     padding: 0;
 }
 
+/*
+    Estilo de enlaces
+*/
 nav a {
+
+    /* Color gris claro */
     color: #cbd5e1;
+
+    /* Quita subrayado */
     text-decoration: none;
+
+    /* Texto seminegrita */
     font-weight: 600;
+
+    /* Transición suave */
     transition: color 0.3s ease;
 }
 
+/*
+    Hover de enlaces
+*/
 nav a:hover {
+
+    /* Cambia a azul */
     color: #3b82f6;
 }
 
+/*
+    Texto de saludo
+*/
 header p {
+
+    /* Tamaño de fuente */
     font-size: 1rem;
+
+    /* Azul */
     color: #3b82f6;
+
+    /* Negrita */
     font-weight: 700;
+
+    /* Sin margen */
     margin: 0;
 }
 
+/*
+    Nombre principal
+*/
 header h1 {
+
+    /*
+        Tamaño adaptable según pantalla
+
+        clamp(min, adaptable, max)
+    */
     font-size: clamp(2.5rem, 7vw, 4.5rem);
+
+    /* Negrita fuerte */
     font-weight: 800;
+
+    /* Sin margen */
     margin: 0;
 }
