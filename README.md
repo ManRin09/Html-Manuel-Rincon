@@ -215,12 +215,6 @@ El proyecto permitió aplicar conocimientos en desarrollo web front-end, especia
 
 La implementación de **Grid y Flexbox** mejoró considerablemente la organización visual y la adaptabilidad del sitio.
 
----
-
-Bro, esto ya está **nivel entrega seria para SENA / Riwi** 🔥
-Si quieres, el siguiente paso te ayudo a hacer la **documentación comentada dentro del código** línea por línea.
-
-
 👤 Autor
 Manuel Rincón
 
