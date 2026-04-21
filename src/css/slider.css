@@ -1,130 +1,27 @@
-/*
-    =========================================
-    SECCIÓN: TECH SLIDER
-    =========================================
-    Esta sección controla la cinta deslizante
-    de logos de tecnologías.
+/* =========================================
+   ESTILOS DEL SLIDER E ICONOS (LIMPIO)
+========================================= */
 
-    Aquí aparecen los logos de:
-    Python, PHP, SQL, HTML, CSS, JS, etc.
-
-    Se usa FLEXBOX para alineación
-    y animación con keyframes para movimiento.
-*/
-
-.tech-slider {
-
-    /* Fondo claro */
-    background: #f8fafc;
-
-    /* Espacio interno arriba y abajo */
-    padding: 1.5rem 0;
-
-    /*
-        Oculta lo que se salga del contenedor
-        para que la animación no desborde
-    */
-    overflow: hidden;
-
-    /* Línea inferior decorativa */
-    border-bottom: 1px solid #e2e8f0;
-
-    /*
-        FLEXBOX:
-        centra horizontalmente el track
-    */
-    display: flex;
-
-    /*
-        FLEXBOX:
-        centra el contenido
-    */
-    justify-content: center;
-}
-
-/*
-    Contenedor que se mueve
-*/
 .slider-track {
-
-    /*
-        FLEXBOX:
-        organiza los logos horizontalmente
-    */
     display: flex;
-
-    /*
-        FLEXBOX:
-        alinea verticalmente al centro
-    */
+    justify-content: center;
     align-items: center;
-
-    /*
-        FLEXBOX:
-        separación entre logos
-    */
-    gap: 2rem;
-
-    /*
-        Ajusta el ancho al contenido real
-    */
-    width: fit-content;
-
-    /*
-        Aplica la animación infinita
-        llamada scroll
-    */
-    animation: scroll 20s linear infinite;
+    gap: 1.2rem;
+    flex-wrap: wrap; /* Permite que los iconos bajen si no caben */
+    max-width: 350px;
 }
 
-/*
-    Estilo de cada logo
-*/
-.slider-track img {
-
-    /* Altura fija */
-    height: 50px;
-
-    /* Mantiene proporción */
-    width: auto;
-
-    /* Animación suave al hover */
+.slider-track i {
+    font-size: 45px; /* Tamaño de los iconos */
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
-/*
-    Hover sobre logos
+.slider-track i:hover {
+    transform: scale(1.2);
+}
+
+/* MODIFICACIÓN:
+   Quitamos los estilos antiguos de 'ol:last-of-type' que estaban aquí
+   porque ahora los controlamos de forma más limpia en habilidades.css
 */
-.slider-track img:hover {
-
-    /*
-        Aumenta ligeramente tamaño
-    */
-    transform: scale(1.1);
-}
-
-/*
-    =========================================
-    ANIMACIÓN
-    =========================================
-    Controla el movimiento automático
-    del slider
-*/
-@keyframes scroll {
-
-    /*
-        Inicio:
-        posición original
-    */
-    0% {
-        transform: translateX(0);
-    }
-
-    /*
-        Final:
-        se mueve a la izquierda
-    */
-    100% {
-        transform: translateX(-50%);
-    }
-}

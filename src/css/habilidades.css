@@ -2,136 +2,92 @@
     =========================================
     SECCIÓN: HABILIDADES
     =========================================
-    Esta clase controla la sección donde
-    se muestran las habilidades técnicas
-    y socioemocionales.
-
-    Aquí se usa GRID para dividir el contenido
-    en columnas.
 */
 
 .seccion-habilidades {
-
-    /* Fondo blanco tipo tarjeta */
     background: white;
-
-    /* Espacio interno */
     padding: 2rem;
-
-    /* Bordes redondeados */
     border-radius: 12px;
-
-    /* Sombra suave */
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-
-    /*
-        GRID:
-        Convierte la sección en un contenedor Grid
-    */
     display: grid;
-
-    /*
-        GRID:
-        Divide el contenido en 2 columnas iguales
-
-        repeat(2, 1fr)
-        = 2 columnas
-        = cada una ocupa una fracción igual
-    */
+    /* Mantenemos las 2 columnas para técnica e iconos */
     grid-template-columns: repeat(2, 1fr);
-
-    /*
-        GRID:
-        Espacio entre columnas y filas
-    */
     gap: 2rem;
 }
 
-/*
-    Títulos dentro de la sección
-*/
+/* Títulos h2 */
 .seccion-habilidades h2 {
-
-    /*
-        GRID:
-        Hace que el título ocupe
-        todo el ancho de las columnas
-
-        desde la columna 1 hasta la última
-    */
+    /* MODIFICACIÓN: Ocupa las dos columnas para estar arriba de su sección */
     grid-column: 1 / -1;
-
-    /* Color azul */
     color: #1e3a8a;
-
-    /* Separación inferior */
     margin-bottom: 1rem;
-
-    /* Línea decorativa */
     border-bottom: 2px solid #3b82f6;
-
-    /* Espacio debajo del texto */
     padding-bottom: 0.5rem;
+    /* MODIFICACIÓN: Centramos el texto del título */
+    text-align: center;
 }
 
-/*
-    Lista ordenada
-*/
-.seccion-habilidades ol {
-
-    /* Espacio para la numeración */
+/* Lista de Habilidades Técnicas (Columna izquierda) */
+.seccion-habilidades ol:first-of-type {
+    grid-column: 1;
     padding-left: 1.5rem;
 }
 
-/*
-    Cada habilidad individual
-*/
-.seccion-habilidades li {
-
-    /* Separación vertical */
-    margin: 0.8rem 0;
-
-    /* Espacio interno */
-    padding: 0.7rem 1rem;
-
-    /* Fondo gris claro */
-    background-color: #f8fafc;
-
-    /* Barra azul lateral */
-    border-left: 4px solid #3b82f6;
-
-    /* Bordes redondeados */
-    border-radius: 6px;
-
-    /* Animación suave */
-    transition: 0.2s ease;
+/* Contenedor de Iconos (Columna derecha) */
+.tech-slider {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/*
-    Hover:
-    movimiento al pasar mouse
+/* =========================================
+    HABILIDADES SOCIOEMOCIONALES (CENTRADO FORZADO)
+    =========================================
 */
-.seccion-habilidades li:hover {
 
-    /* Desplaza ligeramente a la derecha */
+/* MODIFICACIÓN: 
+    Seleccionamos la segunda lista (socioemocionales) para que:
+    1. Ocupe todo el ancho del grid.
+    2. Use flexbox para centrar los elementos hijos.
+*/
+.seccion-habilidades ol:last-of-type {
+    grid-column: 1 / -1; /* Ocupa todo el ancho */
+    display: flex;
+    flex-direction: column; /* Los pone uno debajo del otro */
+    align-items: center;    /* Los centra horizontalmente */
+    padding: 0;
+    list-style: none;       /* Quitamos puntos/números para facilitar el centrado */
+}
+
+.seccion-habilidades li {
+    margin: 0.8rem 0;
+    padding: 0.7rem 1rem;
+    background-color: #f8fafc;
+    border-left: 4px solid #3b82f6;
+    border-radius: 6px;
+    transition: 0.2s ease;
+    /* MODIFICACIÓN: Ancho fijo para que todas se vean iguales al estar centradas */
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.seccion-habilidades li:hover {
     transform: translateX(5px);
 }
 
-/*
-    =========================================
+/* =========================================
     RESPONSIVE
     =========================================
-    Ajusta la sección en móviles
 */
 @media (max-width: 768px) {
-
     .seccion-habilidades {
-
-        /*
-            GRID:
-            Cambia de 2 columnas
-            a 1 sola columna
-        */
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Una sola columna en móvil */
+    }
+    
+    .seccion-habilidades ol:first-of-type,
+    .tech-slider {
+        grid-column: 1;
     }
 }
