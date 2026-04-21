@@ -1,10 +1,3 @@
-De una bro 🔥📄
-Ahora sí vamos con la **documentación profesional** para que lo puedas entregar y también sustentar si te preguntan.
-
-Te la voy a dejar **lista para copiar en Word o PDF**, con lenguaje formal pero humano.
-
----
-
 # DOCUMENTACIÓN DEL PORTAFOLIO WEB
 
 **Autor:** Manuel Rincón
