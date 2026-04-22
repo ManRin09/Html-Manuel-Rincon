@@ -191,8 +191,9 @@ header h1 {
     margin: 0;
 }
 /* =========================================
-   RESPONSIVE HEADER
-   ========================================= */
+RESPONSIVE HEADER
+========================================= 
+*/
 @media (max-width: 600px) {
     nav ul {
         flex-direction: column; /* Menú en lista vertical */
@@ -203,5 +204,60 @@ header h1 {
     header h1 {
         font-size: 1.8rem; /* Reducimos el tamaño del nombre */
         text-align: center;
+    }
+}
+/*
+    =========================================
+    BOTÓN HAMBURGUESA
+    =========================================
+*/
+.menu-toggle {
+
+    /* Oculto en escritorio */
+    display: none;
+
+    background: none;
+    border: none;
+
+    color: white;
+
+    font-size: 2rem;
+
+    cursor: pointer;
+
+    margin: 0 auto;
+}
+
+/*
+    =========================================
+    RESPONSIVE
+    Bootstrap lg = 992px
+    =========================================
+*/
+@media (max-width: 991.98px) {
+
+    /*
+        Mostrar botón
+    */
+    .menu-toggle {
+        display: block;
+    }
+
+    /*
+        Ocultar menú inicialmente
+    */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    /*
+        Mostrar menú al hacer click
+    */
+    nav ul.active {
+        display: flex;
     }
 }
