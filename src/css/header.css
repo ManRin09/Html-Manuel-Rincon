@@ -190,3 +190,18 @@ header h1 {
     /* Sin margen */
     margin: 0;
 }
+/* =========================================
+   RESPONSIVE HEADER
+   ========================================= */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column; /* Menú en lista vertical */
+        align-items: center;
+        gap: 10px;
+    }
+
+    header h1 {
+        font-size: 1.8rem; /* Reducimos el tamaño del nombre */
+        text-align: center;
+    }
+}

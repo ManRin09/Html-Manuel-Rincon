@@ -1,0 +1,21 @@
+/* =========================================
+   RESPONSIVE GENERAL
+   ========================================= */
+@media (max-width: 768px) {
+    /* Ajustamos el contenedor principal para que no tenga márgenes laterales excesivos */
+    .content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Si usas un layout con Aside lateral, lo mandamos abajo */
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+        margin-top: 2rem;
+    }
+}

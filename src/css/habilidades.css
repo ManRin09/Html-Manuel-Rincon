@@ -91,3 +91,28 @@
         grid-column: 1;
     }
 }
+/* =========================================
+   RESPONSIVE HABILIDADES
+   ========================================= */
+@media (max-width: 768px) {
+    .seccion-habilidades {
+        /* Pasamos de 2 columnas a solo 1 */
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+    /* Forzamos a que todo ocupe el ancho completo */
+    .lista-tecnica, 
+    .tech-slider, 
+    .lista-socioemocional {
+        grid-column: 1 / -1;
+        width: 100%;
+    }
+
+    /* Centramos los items de las listas para que se vean mejor en vertical */
+    .seccion-habilidades li {
+        max-width: 100%;
+        text-align: center;
+    }
+}
