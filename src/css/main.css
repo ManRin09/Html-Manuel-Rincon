@@ -114,11 +114,12 @@ section {
 }
 
 /*
-    Hace que título y párrafo
+    Hace que título, párrafo y botón
     ocupen ambas columnas
 */
 #inicio h2,
-#inicio > p {
+#inicio > p,
+#inicio > .btn-mascotas {
 
     /*
         GRID:
@@ -236,6 +237,52 @@ figure {
 
 /*
     =========================================
+    BOTÓN MASCOTAS
+    =========================================
+*/
+.btn-mascotas {
+
+    /* Convertir en botón */
+    display: inline-block;
+
+    /* Ajuste dentro del grid */
+    width: fit-content;
+
+    /* Espaciado */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    padding: 12px 24px;
+
+    /* Fondo */
+    background-color: #1e3a8a;
+
+    /* Texto */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+
+    /* Bordes */
+    border-radius: 30px;
+
+    /* Animación */
+    transition: 0.3s ease;
+}
+
+/*
+    Hover
+*/
+.btn-mascotas:hover {
+
+    /* Cambio visual */
+    background-color: #3b82f6;
+
+    /* Efecto elevación */
+    transform: translateY(-3px);
+}
+
+/*
+    =========================================
     RESPONSIVE
     =========================================
 */
@@ -258,5 +305,62 @@ figure {
             una sola columna en móviles
         */
         grid-template-columns: 1fr;
+    }
+}
+/*
+    =========================================
+    RESPONSIVE TABLET
+    =========================================
+    Este media query se activa en pantallas
+    medianas como tablets.
+
+    Rango:
+    desde 769px hasta 991px
+
+    Función:
+    - mantiene el main en 2 columnas
+    - proyectos en 2 columnas
+    - sección acerca de mí en 2 columnas
+*/
+@media (min-width: 769px) and (max-width: 991px) {
+
+    /*
+        MAIN:
+        conserva contenido + aside
+    */
+    main {
+
+        /*
+            GRID:
+            2 columnas
+            contenido principal + barra lateral
+        */
+        grid-template-columns: 3fr 1fr;
+    }
+
+    /*
+        SECCIÓN INICIO:
+        proyectos en 2 columnas
+    */
+    #inicio {
+
+        /*
+            GRID:
+            2 tarjetas por fila
+        */
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /*
+        SECCIÓN ACERCA DE:
+        2 columnas
+    */
+    #acerca-de {
+
+        /*
+            GRID:
+            2 columnas
+        */
+        grid-template-columns: repeat(2, 1fr);
     }
 }

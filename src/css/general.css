@@ -1,5 +1,65 @@
 /*
     =========================================
+    VARIABLES GLOBALES
+    =========================================
+    Colores y tipografía reutilizables
+*/
+:root {
+
+    /* Color principal */
+    --color-primary: #1e3a8a;
+
+    /* Color secundario */
+    --color-secondary: #3b82f6;
+
+    /* Texto */
+    --color-text: #333;
+
+    /* Fondo */
+    --color-background: #f0f2f5;
+
+    /* Fuente principal */
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/*
+    =========================================
+    VARIABLES GLOBALES
+    =========================================
+    Colores y tipografía reutilizables
+*/
+:root {
+
+    /* Colores principales */
+    --color-primary: #1e3a8a;
+    --color-secondary: #3b82f6;
+    --color-text: #333;
+    --color-background: #f0f2f5;
+
+    /* Tipografía principal */
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*
+    =========================================
+    IMÁGENES RESPONSIVAS
+    =========================================
+    Todas las imágenes se adaptan al contenedor
+*/
+img {
+
+    /* Nunca excede el ancho del padre */
+    max-width: 100%;
+
+    /* Mantiene proporción */
+    height: auto;
+
+    /* Evita espacios extra debajo */
+    display: block;
+}
+
+
+/*
+    =========================================
     SECCIÓN: ESTILOS GENERALES
     =========================================
     Este bloque define configuraciones globales
@@ -33,33 +93,14 @@
 */
 body {
 
-    /* Color de fondo general */
-    background-color: #f0f2f5;
+    /* Fondo global */
+    background-color: var(--color-background);
 
     /* Color del texto */
-    color: #333;
+    color: var(--color-text);
 
-    /* Espaciado vertical entre líneas */
-    line-height: 1.6;
-
-    /*
-        FLEXBOX:
-        Convierte todo el body en un contenedor flexible
-    */
-    display: flex;
-
-    /*
-        FLEXBOX:
-        Organiza los elementos verticalmente
-        de arriba hacia abajo
-    */
-    flex-direction: column;
-
-    /*
-        Hace que el body mida mínimo
-        el alto completo de la pantalla
-    */
-    min-height: 100vh;
+    /* Fuente principal */
+    font-family: var(--font-main);
 }
 
 /*

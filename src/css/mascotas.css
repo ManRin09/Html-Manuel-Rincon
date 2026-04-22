@@ -264,14 +264,44 @@ footer a:hover {
 }
 
 /* RESPONSIVE */
+/*
+    =========================================
+    RESPONSIVE MÓVIL
+    =========================================
+    Este bloque se activa en celulares.
+
+    Función:
+    - la galería pasa a 2 columnas
+*/
 @media (max-width: 768px) {
 
     .gallery {
 
         /*
             GRID:
-            cambia a una sola columna
+            2 columnas en móviles
         */
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*
+    =========================================
+    RESPONSIVE TABLET
+    =========================================
+    Este bloque se activa en tablets.
+
+    Función:
+    - la galería muestra 3 columnas
+*/
+@media (min-width: 769px) and (max-width: 991px) {
+
+    .gallery {
+
+        /*
+            GRID:
+            3 columnas en tablets
+        */
+        grid-template-columns: repeat(3, 1fr);
     }
 }

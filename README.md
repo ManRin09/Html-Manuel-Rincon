@@ -279,4 +279,4 @@ La implementación de **Grid, Flexbox, Media Queries y JavaScript** mejoró cons
 
 **Manuel Rincón**  
 Desarrollador Fullstack en formación  
-📧 Correo: mandarin030290@gmail.com
+
