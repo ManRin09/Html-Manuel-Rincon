@@ -1,5 +1,5 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <!--
     =========================================
     ARCHIVO: index.html
@@ -7,7 +7,6 @@
     FUNCIÓN DEL ARCHIVO:
     Este archivo representa la página principal
     del portafolio personal de Manuel Rincón.
-
     Contiene:
     - encabezado con menú responsive
     - presentación profesional
@@ -16,7 +15,6 @@
     - botón de acceso a la página de mascotas
     - sección de contacto
 -->
-
 <html lang="es">
 <head>
     <!--
@@ -32,11 +30,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi portafolio - Manuel Rincon</title>
-
     <!-- Librería de iconos -->
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-
     <!-- Hojas de estilo -->
     <link rel="stylesheet" href="src/css/general.css">
     <link rel="stylesheet" href="src/css/header.css">
@@ -46,9 +42,7 @@
     <link rel="stylesheet" href="src/css/aside.css">
     <link rel="stylesheet" href="src/css/fooder.css">
 </head>
-
 <body>
-
     <!--
         =========================================
         HEADER
@@ -56,7 +50,6 @@
         Encabezado principal del portafolio
     -->
     <header>
-
         <!--
             =====================================
             MENÚ DE NAVEGACIÓN
@@ -65,12 +58,10 @@
             para responsive
         -->
         <nav>
-
             <!-- Botón hamburguesa -->
             <button class="menu-toggle" id="menu-toggle">
                 ☰
             </button>
-
             <!-- Lista del menú -->
             <ul id="nav-menu">
                 <li><a href="#inicio">Inicio</a></li>
@@ -79,12 +70,10 @@
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
-
         <!-- Presentación principal -->
         <p>Hola, soy</p>
         <h1>Manuel Rincon</h1>
     </header>
-
     <!--
         =========================================
         MAIN
@@ -92,10 +81,8 @@
         Contenido principal del portafolio
     -->
     <main>
-
         <!-- Contenido principal -->
         <div class="content">
-
             <!--
                 =====================================
                 SECCIÓN INICIO
@@ -103,14 +90,11 @@
                 Presentación y proyectos
             -->
             <section id="inicio">
-
                 <h2>Desarrollador Backend & Fullstack en formación</h2>
-
                 <p>
                     Construyo soluciones web con orden,
                     lógica y visión de futuro
                 </p>
-
                 <!--
                     =====================================
                     BOTÓN HACIA MASCOTAS
@@ -120,7 +104,6 @@
                 <a href="/src/views/mascotas.html" class="btn-mascotas">
                     🐾 Ver mis mascotas
                 </a>
-
                 <!--
                     =====================================
                     PROYECTO 1
@@ -128,24 +111,20 @@
                 -->
                 <article>
                     <h3>Proyecto: TraFree</h3>
-
                     <p>
                         Proyecto colaborativo desarrollado por 3 integrantes.
                         Mi enfoque principal es el backend utilizando Python
                         para la API y SQL para la gestión del servidor
                         y base de datos.
                     </p>
-
                     <figure>
                         <img src="public/img/TraFree.jpeg" alt="Proyecto TraFree">
-
                         <figcaption>
                             Aplicación orientada al servicio
                             de transporte tipo taxi.
                         </figcaption>
                     </figure>
                 </article>
-
                 <!--
                     =====================================
                     PROYECTO 2
@@ -153,15 +132,12 @@
                 -->
                 <article>
                     <h3>Creador de tareas con Python</h3>
-
                     <p>
                         Proyecto desarrollado durante
                         una prueba técnica en Riwi.
                     </p>
-
                     <figure>
                         <img src="public/img/Python.webp" alt="Logo Python">
-
                         <figcaption>
                             Permite crear, guardar y filtrar
                             tareas usando archivos CSV.
@@ -169,7 +145,6 @@
                     </figure>
                 </article>
             </section>
-
             <!--
                 =====================================
                 ACERCA DE MÍ
@@ -177,39 +152,31 @@
             -->
             <section id="acerca-de">
                 <h2>Acerca de mí</h2>
-
                 <figure>
                     <img src="public/img/logoSena.png" alt="Logo SENA">
-
                     <figcaption>
                         Estudiante de Análisis y Desarrollo de Software
                     </figcaption>
                 </figure>
-
                 <figure>
                     <img src="public/img/Riwi.png" alt="Logo Riwi">
-
-                    <figcaption>
+                <figcaption>
                         Formación complementaria en Riwi
                     </figcaption>
                 </figure>
             </section>
-
             <!--
                 =====================================
                 HABILIDADES
                 =====================================
             -->
             <section id="mis-habilidades" class="seccion-habilidades">
-
                 <h2>Habilidades Técnicas</h2>
-
                 <ol>
                     <li>Backend con Python, PHP y SQL</li>
                     <li>Frontend con HTML, CSS y JavaScript</li>
                     <li>Análisis y planeación de software</li>
                 </ol>
-
                 <!-- Slider de tecnologías -->
                 <div class="tech-slider">
                     <div class="slider-track">
@@ -223,9 +190,7 @@
                         <i class="devicon-csharp-plain colored" title="C#"></i>
                     </div>
                 </div>
-
                 <h2>Habilidades Socioemocionales</h2>
-
                 <ol>
                     <li>Trabajo en equipo</li>
                     <li>Liderazgo</li>
@@ -233,7 +198,6 @@
                 </ol>
             </section>
         </div>
-
         <!--
             =====================================
             ASIDE
@@ -242,14 +206,12 @@
         -->
         <aside>
             <h3>Enlaces Relacionados</h3>
-
             <ul>
                 <li>
                     <a href="https://www.linkedin.com/" target="_blank">
                         🔗 Mi perfil en LinkedIn
                     </a>
                 </li>
-
                 <li>
                     <a href="mailto:mandarin030290@gmail.com">
                         📧 Envíame un correo
@@ -258,7 +220,6 @@
             </ul>
         </aside>
     </main>
-
     <!--
         =========================================
         FOOTER
@@ -268,21 +229,21 @@
     <footer id="contacto">
         <div class="footer-container">
             <h2>Contacto</h2>
-
             <p>
                 ¿Tienes una idea, proyecto o propuesta?
                 Estoy disponible para colaborar.
             </p>
-
             <div class="datos-contacto">
                 <p>📧 Correo: mandarin030290@gmail.com</p>
                 <p>📱 Teléfono: +57 3159841145</p>
             </div>
         </div>
     </footer>
-
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- SweetAlert2 (debe ir ANTES de scripts.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Archivo JavaScript -->
     <script src="/src/JavaScript/scripts.js"></script>
-
 </body>
 </html>
