@@ -280,3 +280,4 @@ La implementación de **Grid, Flexbox, Media Queries y JavaScript** mejoró cons
 **Manuel Rincón**  
 Desarrollador Fullstack en formación  
 
+https://github.com/ManRin09/ManRin09.github.io.git
